@@ -1,0 +1,20 @@
+{
+  "name": "for-the-birds",
+  "version": "1.0.0",
+  "description": "A Flappy Bird clone in JavaScript, just for fun.",
+  "main": "for-the-birds.js",
+  "scripts": {
+    "start": "node for-the-birds.js"
+  },
+  "dependencies": {
+    "node-static": "0.7.7"
+  },
+  "engines": {
+    "node": "5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdeetz/for-the-birds"
+  },
+  "author": "Roger Deetz"
+}
