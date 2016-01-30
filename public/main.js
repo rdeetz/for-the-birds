@@ -33,6 +33,7 @@ var mainState = {
     this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
     this.score = 0;
   this.labelScore = game.add.text(20, 20, "0", { font: "30px Arial", fill: "#ffffff" });
+this.jumpSound = game.add.audio('jump');
 },
 
   update: function() {
@@ -51,7 +52,8 @@ var mainState = {
   jump: function() {
     if (this.bird.alive == false) {
       return;
-    }
+    this.jumpSound.play();
+  }
 
     // Add a vertical velocity to the bird
     this.bird.body.velocity.y = -350;
