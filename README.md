@@ -1,5 +1,5 @@
 # for-the-birds
-A Flappy Bird clone in JavaScript, just for fun. Following 
+A Flappy Bird clone in JavaScript, just for fun. Following
 [this tutorial](http://blog.lessmilk.com/how-to-make-flappy-bird-in-html5-1/).
 
 ## requirements
@@ -10,6 +10,5 @@ A Flappy Bird clone in JavaScript, just for fun. Following
 2. Clone the repository
 3. `npm install node-static`
 4. `node for-the-birds.js`
-5. Open a web browser to [localhost:8080](http://localhost:8080)
+5. Open a web browser to [localhost:5000](http://localhost:5000)
 6. Flap to your heart's content
- 
