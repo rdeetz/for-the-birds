@@ -8,7 +8,8 @@ var mainState = {
 
     game.load.image('bird', 'assets/bird.png');
     game.load.image('pipe', 'assets/pipe.png');
-  },
+  game.load.audio('jump', 'assets/jump.wav');
+},
 
   create: function() {
     // Set the physics system
