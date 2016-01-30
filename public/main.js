@@ -41,7 +41,9 @@ var mainState = {
     }
 
     game.physics.arcade.overlap(this.bird, this.pipes, this.restartGame, null, this);
-  },
+    if (this.bird.angle < 20)
+      this.bird.angle += 1;
+    },
 
   // Make the bird jump
   jump: function() {
