@@ -41,14 +41,17 @@ var mainState = {
     }
 
     game.physics.arcade.overlap(this.bird, this.pipes, this.hitPipe, null, this);
-  },
+
+    if (this.bird.angle < 20)
+      this.bird.angle += 1;
+    },
 
   // Make the bird jump
   jump: function() {
     if (this.bird.alive == false) {
       return;
     }
-    
+
     // Add a vertical velocity to the bird
     this.bird.body.velocity.y = -350;
   },
