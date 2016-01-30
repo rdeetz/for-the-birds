@@ -52,11 +52,12 @@ this.jumpSound = game.add.audio('jump');
   jump: function() {
     if (this.bird.alive == false) {
       return;
-    this.jumpSound.play();
+
   }
 
     // Add a vertical velocity to the bird
     this.bird.body.velocity.y = -350;
+    this.jumpSound.play();
   },
 
   // Restart the game
