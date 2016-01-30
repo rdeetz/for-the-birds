@@ -8,7 +8,8 @@ var mainState = {
 
     game.load.image('bird', 'assets/bird.png');
     game.load.image('pipe', 'assets/pipe.png');
-  },
+  game.load.audio('jump', 'assets/jump.wav');
+},
 
   create: function() {
     // Set the physics system
@@ -32,8 +33,9 @@ var mainState = {
 
     this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
     this.score = 0;
-    
+
     this.labelScore = game.add.text(20, 20, "0", { font: "30px Arial", fill: "#ffffff" });
+    this.jumpSound = game.add.audio('jump');
 },
 
   update: function() {
@@ -52,12 +54,13 @@ var mainState = {
   jump: function() {
     if (this.bird.alive == false) {
       return;
-    }
+
+  }
 
     // Add a vertical velocity to the bird
     this.bird.body.velocity.y = -350;
-
     game.add.tween(this.bird).to({angle: -20}, 100).start();
+    this.jumpSound.play();
   },
 
   // Restart the game
