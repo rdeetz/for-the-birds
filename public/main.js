@@ -30,7 +30,9 @@ var mainState = {
     this.pipes.createMultiple(20, 'pipe'); // Create 20 pipes
 
     this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
-  },
+    this.score = 0;
+  this.labelScore = game.add.text(20, 20, "0", { font: "30px Arial", fill: "#ffffff" });
+},
 
   update: function() {
     // If the bird is out of the world (too high or too low), call the 'restartGame' function
