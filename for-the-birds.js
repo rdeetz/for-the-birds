@@ -1,4 +1,4 @@
-var static = require('node-static'), port = 5000, http = require('http');
+var static = require('node-static'), port = (process.env.PORT || 5000), http = require('http');
 
 var file = new static.Server('./public', { cache: 3600, gzip: true });
 
