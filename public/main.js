@@ -40,11 +40,15 @@ var mainState = {
       this.restartGame();
     }
 
-    game.physics.arcade.overlap(this.bird, this.pipes, this.restartGame, null, this);
+    game.physics.arcade.overlap(this.bird, this.pipes, this.hitPipe, null, this);
   },
 
   // Make the bird jump
   jump: function() {
+    if (this.bird.alive == false) {
+      return;
+    }
+    
     // Add a vertical velocity to the bird
     this.bird.body.velocity.y = -350;
   },
@@ -84,6 +88,18 @@ var mainState = {
     this.score += 1;
     this.labelScore.text = this.score;
   },
+
+  hitPipe: function() {
+    // If the bird has already hit a pipe, we have nothing to do
+    if (this.bird.alive == false) {
+      return;
+    }
+
+    this.bird.alive = false;
+    game.time.events.remove(this.timer);
+
+    this.pipes.forEachAlive(function (p) {p.body.velocity.x = 0;}, this);
+  }
 };
 
 // Add and start the 'main' state to start the game
