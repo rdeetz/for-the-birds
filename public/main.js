@@ -20,6 +20,7 @@ var mainState = {
     // Add gravity to the bird to make it fall
     game.physics.arcade.enable(this.bird);
     this.bird.body.gravity.y = 1000;
+    this.bird.anchor.setTo(-0.2, 0.5);
 
     // Call the 'jump' function when the spacekey is hit
     var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -54,6 +55,8 @@ var mainState = {
 
     // Add a vertical velocity to the bird
     this.bird.body.velocity.y = -350;
+
+    game.add.tween(this.bird).to({angle: -20}, 100).start();
   },
 
   // Restart the game
