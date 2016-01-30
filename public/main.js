@@ -37,6 +37,8 @@ var mainState = {
     if (this.bird.inWorld == false) {
       this.restartGame();
     }
+
+    game.physics.arcade.overlap(this.bird, this.pipes, this.restartGame, null, this);
   },
 
   // Make the bird jump
@@ -76,6 +78,9 @@ var mainState = {
         this.addOnePipe(400, i * 60 + 10);
       }
     }
+
+    this.score += 1;
+    this.labelScore.text = this.score;
   },
 };
 
