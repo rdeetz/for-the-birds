@@ -4,10 +4,10 @@ var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
 // Create our 'main' state that will contain the game
 var mainState = {
   preload: function() {
-    game.stage.backgroundColor = '#71c5cf';
+    game.stage.backgroundColor = '#360606';
 
-    game.load.image('bird', 'assets/bird.png');
-    game.load.image('pipe', 'assets/pipe.png');
+    game.load.image('bird', 'assets/kitty.png');
+    game.load.image('pipe', 'assets/dog.png');
     game.load.audio('jump', 'assets/jump.wav');
 },
 
