@@ -8,7 +8,7 @@ var mainState = {
 
     game.load.image('bird', 'assets/bird.png');
     game.load.image('pipe', 'assets/pipe.png');
-  game.load.audio('jump', 'assets/jump.wav');
+    game.load.audio('jump', 'assets/jump.wav');
 },
 
   create: function() {
@@ -54,8 +54,7 @@ var mainState = {
   jump: function() {
     if (this.bird.alive == false) {
       return;
-
-  }
+    }
 
     // Add a vertical velocity to the bird
     this.bird.body.velocity.y = -350;
