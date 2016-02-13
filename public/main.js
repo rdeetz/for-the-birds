@@ -8,6 +8,7 @@ var mainState = {
 
     game.load.image('bird', 'assets/kitty.png');
     game.load.image('pipe', 'assets/dog.png');
+    game.load.image('torch', 'assets/torch.png');
     game.load.audio('jump', 'assets/jump.wav');
   },
 
