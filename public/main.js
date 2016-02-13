@@ -48,7 +48,7 @@ var mainState = {
 
     if (this.bird.angle < 20)
       this.bird.angle += 1;
-    },
+  },
 
   // Make the bird jump
   jump: function() {
