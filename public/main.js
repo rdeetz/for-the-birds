@@ -9,6 +9,7 @@ var mainState = {
     game.load.image('bird', 'assets/kitty.png');
     game.load.image('pipe', 'assets/dog.png');
     game.load.image('torch', 'assets/torch.png');
+    game.load.image('stone', 'assets/stone.png');
     game.load.audio('jump', 'assets/jump.wav');
   },
 
@@ -23,6 +24,8 @@ var mainState = {
     game.physics.arcade.enable(this.bird);
     this.bird.body.gravity.y = 1000;
     this.bird.anchor.setTo(-0.2, 0.5);
+
+    this.game.add.image(0, 550, 'stone');
 
     // Call the 'jump' function when the spacekey is hit
     var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
