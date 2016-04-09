@@ -1,5 +1,5 @@
 // Initialize Phaser, and create a 400x490px game
-var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'gameDiv');
 
 // Create our 'main' state that will contain the game
 var mainState = {
@@ -90,7 +90,7 @@ var mainState = {
     var hole = Math.floor(Math.random() * 5) + 1;
 
     // Add the 6 pipes
-    for (var i = 0; i < 8; i++) {
+    for (var i = 0; i < 9; i++) {
       if (i != hole && i != hole + 1) {
         this.addOnePipe(400, i * 60 + 10);
       }
