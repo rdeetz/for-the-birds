@@ -8,8 +8,9 @@ var mainState = {
 
     game.load.image('bird', 'assets/kitty.png');
     game.load.image('pipe', 'assets/dog.png');
+    game.load.image('torch', 'assets/torch.png');
     game.load.audio('jump', 'assets/jump.wav');
-},
+  },
 
   create: function() {
     // Set the physics system
@@ -36,7 +37,7 @@ var mainState = {
 
     this.labelScore = game.add.text(20, 20, "0", { font: "30px Arial", fill: "#ffffff" });
     this.jumpSound = game.add.audio('jump');
-},
+  },
 
   update: function() {
     // If the bird is out of the world (too high or too low), call the 'restartGame' function
@@ -46,9 +47,10 @@ var mainState = {
 
     game.physics.arcade.overlap(this.bird, this.pipes, this.hitPipe, null, this);
 
-    if (this.bird.angle < 20)
+    if (this.bird.angle < 20) {
       this.bird.angle += 1;
-    },
+    }
+  },
 
   // Make the bird jump
   jump: function() {
